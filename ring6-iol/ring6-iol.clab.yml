@@ -5,27 +5,27 @@ topology:
     r1:
       kind: cisco_iol
       image: vrnetlab/cisco_iol:17.15.1
-      startup-config: configs/r1.cfg
+      startup-config: configs/r1.cfg.partial
     r2:
       kind: cisco_iol
       image: vrnetlab/cisco_iol:17.15.1
-      startup-config: configs/r2.cfg
+      startup-config: configs/r2.cfg.partial
     r3:
       kind: cisco_iol
       image: vrnetlab/cisco_iol:17.15.1
-      startup-config: configs/r3.cfg
+      startup-config: configs/r3.cfg.partial
     r4:
       kind: cisco_iol
       image: vrnetlab/cisco_iol:17.15.1
-      startup-config: configs/r4.cfg
+      startup-config: configs/r4.cfg.partial
     r5:
       kind: cisco_iol
       image: vrnetlab/cisco_iol:17.15.1
-      startup-config: configs/r5.cfg
+      startup-config: configs/r5.cfg.partial
     r6:
       kind: cisco_iol
       image: vrnetlab/cisco_iol:17.15.1
-      startup-config: configs/r6.cfg
+      startup-config: configs/r6.cfg.partial
 
     h1:
       kind: linux
