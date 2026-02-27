@@ -16,13 +16,11 @@ interface Loopback0
 interface Ethernet0/1
  ip address 10.0.23.2 255.255.255.252
  ip router isis CORE
- mpls ip
  no shutdown
 !
 interface Ethernet0/2
  ip address 10.0.34.1 255.255.255.252
  ip router isis CORE
- mpls ip
  no shutdown
 !
 router isis CORE
