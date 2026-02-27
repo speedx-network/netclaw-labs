@@ -1,0 +1,384 @@
+{
+  "name": "ring6-iol",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-ef2af18e490d",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "h1": {
+      "index": "0",
+      "shortname": "h1",
+      "longname": "clab-ring6-iol-h1",
+      "fqdn": "h1.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/h1",
+      "kind": "linux",
+      "image": "alpine:3.20",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/h1",
+        "clab-node-longname": "clab-ring6-iol-h1",
+        "clab-node-name": "h1",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h2": {
+      "index": "1",
+      "shortname": "h2",
+      "longname": "clab-ring6-iol-h2",
+      "fqdn": "h2.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/h2",
+      "kind": "linux",
+      "image": "alpine:3.20",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/h2",
+        "clab-node-longname": "clab-ring6-iol-h2",
+        "clab-node-name": "h2",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r1": {
+      "index": "2",
+      "shortname": "r1",
+      "longname": "clab-ring6-iol-r1",
+      "fqdn": "r1.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r1",
+      "kind": "cisco_iol",
+      "image": "vrnetlab/cisco_iol:17.15.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r1",
+        "clab-node-longname": "clab-ring6-iol-r1",
+        "clab-node-name": "r1",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r2": {
+      "index": "3",
+      "shortname": "r2",
+      "longname": "clab-ring6-iol-r2",
+      "fqdn": "r2.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r2",
+      "kind": "cisco_iol",
+      "image": "vrnetlab/cisco_iol:17.15.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r2",
+        "clab-node-longname": "clab-ring6-iol-r2",
+        "clab-node-name": "r2",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r3": {
+      "index": "4",
+      "shortname": "r3",
+      "longname": "clab-ring6-iol-r3",
+      "fqdn": "r3.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r3",
+      "kind": "cisco_iol",
+      "image": "vrnetlab/cisco_iol:17.15.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r3",
+        "clab-node-longname": "clab-ring6-iol-r3",
+        "clab-node-name": "r3",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r4": {
+      "index": "5",
+      "shortname": "r4",
+      "longname": "clab-ring6-iol-r4",
+      "fqdn": "r4.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r4",
+      "kind": "cisco_iol",
+      "image": "vrnetlab/cisco_iol:17.15.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r4",
+        "clab-node-longname": "clab-ring6-iol-r4",
+        "clab-node-name": "r4",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r5": {
+      "index": "6",
+      "shortname": "r5",
+      "longname": "clab-ring6-iol-r5",
+      "fqdn": "r5.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r5",
+      "kind": "cisco_iol",
+      "image": "vrnetlab/cisco_iol:17.15.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r5",
+        "clab-node-longname": "clab-ring6-iol-r5",
+        "clab-node-name": "r5",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r6": {
+      "index": "7",
+      "shortname": "r6",
+      "longname": "clab-ring6-iol-r6",
+      "fqdn": "r6.ring6-iol.io",
+      "group": "",
+      "labdir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r6",
+      "kind": "cisco_iol",
+      "image": "vrnetlab/cisco_iol:17.15.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ef2af18e490d",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/speed/Dev/.openclaw/workspace/ring6-iol/clab-ring6-iol/r6",
+        "clab-node-longname": "clab-ring6-iol-r6",
+        "clab-node-name": "r6",
+        "clab-node-type": "",
+        "clab-owner": "speed",
+        "clab-topo-file": "/home/speed/Dev/.openclaw/workspace/ring6-iol/ring6-iol.clab.yml",
+        "containerlab": "ring6-iol"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "r1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ba:32:25",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e8:0e:06",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:7d:96:06",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:13:e0:0f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:65:e5:da",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:69:07:53",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r4",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:87:15:89",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r5",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:2b:a5:2e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r5",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d4:38:ef",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r6",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e9:12:f7",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r6",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a7:f7:7e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e7:5a:bf",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:6b:30:70",
+        "peer": "z"
+      },
+      "z": {
+        "node": "h1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e2:cc:75",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r4",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:83:84:2b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "h2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:cf:c9:2b",
+        "peer": "a"
+      }
+    }
+  ]
+}

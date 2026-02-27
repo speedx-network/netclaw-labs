@@ -1,0 +1,54 @@
+name: ring6-iol
+
+topology:
+  nodes:
+    r1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.15.1
+      startup-config: configs/r1.cfg
+    r2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.15.1
+      startup-config: configs/r2.cfg
+    r3:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.15.1
+      startup-config: configs/r3.cfg
+    r4:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.15.1
+      startup-config: configs/r4.cfg
+    r5:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.15.1
+      startup-config: configs/r5.cfg
+    r6:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.15.1
+      startup-config: configs/r6.cfg
+
+    h1:
+      kind: linux
+      image: alpine:3.20
+      exec:
+        - ip addr add 10.1.1.10/24 dev eth1
+        - ip link set eth1 up
+        - ip route add 10.4.4.0/24 via 10.1.1.1
+    h2:
+      kind: linux
+      image: alpine:3.20
+      exec:
+        - ip addr add 10.4.4.10/24 dev eth1
+        - ip link set eth1 up
+        - ip route add 10.1.1.0/24 via 10.4.4.1
+
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r2:eth2", "r3:eth1"]
+    - endpoints: ["r3:eth2", "r4:eth1"]
+    - endpoints: ["r4:eth2", "r5:eth1"]
+    - endpoints: ["r5:eth2", "r6:eth1"]
+    - endpoints: ["r6:eth2", "r1:eth2"]
+
+    - endpoints: ["r1:eth3", "h1:eth1"]
+    - endpoints: ["r4:eth3", "h2:eth1"]
