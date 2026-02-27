@@ -2,6 +2,10 @@ hostname r4
 no ip domain-lookup
 ip cef
 segment-routing mpls
+connected-prefix-sid-map
+ address-family ipv4
+  4.4.4.4/32 index 4 range 1 
+ exit-address-family
 no mpls ldp
 username admin privilege 15 secret admin
 enable secret admin
@@ -17,13 +21,11 @@ interface Ethernet0/1
  ip address 10.0.34.2 255.255.255.252
  ip router isis CORE
  no shutdown
- mpls ip
 !
 interface Ethernet0/2
  ip address 10.0.45.1 255.255.255.252
  ip router isis CORE
  no shutdown
- mpls ip
 !
 interface Ethernet0/3
  ip address 10.4.4.1 255.255.255.0
